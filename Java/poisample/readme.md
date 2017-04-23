@@ -10,13 +10,5 @@ C:\JavaClasses\poi-3.16 以下に poi 関連の jar を展開し、
 異なるディレクトリに展開した場合は、
 外部jar として import しなおしてご利用ください。
 
-<img src="https://github.com/black-merino/fuzzball/raw/doc_image_store/Java/poisample/img/externaljars.png">
-
-![](https://github.com/black-merino/fuzzball/blob/doc_image_store/Java/poisample/img/externaljars.png)
-
-<img src="https://github.com/black-merino/fuzzball/blob/doc_image_store/Java/poisample/img/externaljars.png">
-
-
-![](img/externaljars.png)
-
+<img src="https://github.com/black-merino/fuzzball/raw/doc_image_store/Java/poisample/img/externaljars.png" width="500px">
 
