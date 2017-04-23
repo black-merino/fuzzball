@@ -11,7 +11,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class Main {
      
-	static final String INPUT_DIR = "C:\\Users\\username\\Downloads\\";
+	static final String INPUT_DIR = "C:\\tmp\\";
 	
     public static void main(String[] args) {
         try {
@@ -24,8 +24,11 @@ public class Main {
             for (Sheet sheet : wb ) {
                 for (Row row : sheet) {
                     for (Cell cell : row) {
-                        System.out.print(getCellValue(cell));
-                        System.out.print(" , ");
+                    	Object o = getCellValue(cell);
+                    	if(o != null) {
+	                        System.out.print(o);
+	                        System.out.print(" , ");
+                    	}
                     }
                     System.out.println();
                 }
