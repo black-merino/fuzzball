@@ -12,3 +12,7 @@ C:\JavaClasses\poi-3.16 以下に poi 関連の jar を展開し、
 
 <img src="https://github.com/black-merino/fuzzball/raw/doc_image_store/Java/poisample/img/externaljars.png" width="500px">
 
+
+### Licence
+
+[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)
