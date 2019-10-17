@@ -112,7 +112,7 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>..\stdafx.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>.\Release/ColorPicker.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>..\Release/</AssemblerListingLocation>
@@ -143,7 +143,7 @@
     <ClCompile Include="..\ColorPicker.cpp" />
     <ClCompile Include="..\StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
