@@ -1,0 +1,45 @@
+dialog {
+  padding: 0;
+  border: 0;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 1em black;
+  min-width: 250px;
+}
+
+.dialog-header {
+  margin: 0px;
+  background-color: #77f;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  border-bottom: 1px solid #77f;
+}
+
+.dialog-title {
+  margin: 0px;
+  margin-left: 10px;
+}
+
+.dialog-icon-image {
+  margin-right: 20px;
+  width: 48px;
+  height: 48px;
+}
+
+.dialog-body-row {
+  min-width: 100px;
+}
+
+.dialog-body-table {
+  margin: 10px;
+  /*    
+  border: 2px #ff0000 solid;
+  */
+}
+
+.dialog-footer {
+  text-align: center;
+  margin: 5px;
+  /*  
+    border-top: 1px solid #77f;
+    */
+}

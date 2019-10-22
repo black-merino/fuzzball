@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>dialogサンプル</title>
+    <link rel="stylesheet" type="text/css" href="./dialog.css" />
+    <style>
+        header {
+          height: 50px;
+          text-align: center;
+        }
+      </style>
+  </head>
+
+  <body>
+    <header>ダイアログのサンプル<br /></header>
+
+    <dialog>
+      <!-- title -->
+      <div class="dialog-header">
+        <p class="dialog-title">タイトル</p>
+      </div>
+      <!-- body -->
+      <div>
+        <table class="dialog-body-table">
+          <!-- １行目 -->
+          <tr>
+            <!-- １行目の１列目にアイコンを配置。セルを縦に結合する -->
+            <td rowspan="2">
+              <image class="dialog-icon-image" src="icon.png"/>
+            </td>
+            <!-- １行目のメッセージ -->
+            <td class="dialog-message-row">１行目</td>
+          </tr>
+          <!-- ２行目 -->
+          <tr>
+            <!-- ２行目のメッセージ -->
+            <td class="dialog-message-row">２行名</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- footer -->
+      <footer class="dialog-footer">
+        <button id="dialog-ok" type="button">OK</button>
+        <button id="dialog-cancel" type="button">Cancel</button>
+      </footer>
+    </dialog>
+    <button id="show">ダイアログを開く</button>
+
+    <!--script -->
+    <script>
+      var dialog = document.querySelector("dialog");
+      // ダイアログを開くボタン
+      var btn_show = document.getElementById("show");
+      btn_show.addEventListener(
+        "click",
+        function() {
+          dialog.showModal();
+        },
+        false
+      );
+
+      // ダイアログ上のボタン
+      var btn_ok = document.getElementById("dialog-ok");
+      var btn_cancel = document.getElementById("dialog-cancel");
+      btn_ok.addEventListener(
+        "click",
+        function() {
+          dialog.close();
+        },
+        false
+      );
+      btn_cancel.addEventListener(
+        "click",
+        function() {
+          dialog.close();
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
