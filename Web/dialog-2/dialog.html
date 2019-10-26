@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>dialogサンプル</title>
+    <link rel="stylesheet" type="text/css" href="./dialog.css" />
+    <style>
+      header {
+        height: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>Dialog sample<br /></header>
+
+    <button id="show" onclick="myclick()">Show Dialog</button>
+    <br />
+    <p>Result</p>
+    <input type="text" id="resultText" />
+
+    <script src="dialog.js"></script>
+    <script>
+      async function myclick() {
+        var textElement = document.getElementById("resultText");
+        // clear result
+        textElement.value = "";
+
+        // define arguments
+        var title = "My Title";
+        var iconImage = "icon.png";
+        var messages = [
+          "This is first row message.",
+          "2nd row. The quick brown fox jumps over the lazy dog",
+          "3rd row. I have a dream.",
+          "4th row. World War Zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
+        ];
+        var buttons = ["OK", "Cancel"];
+
+        // display dialog
+        var ret = await myCreateDialog(title, iconImage, messages, buttons);
+
+        // output result
+        textElement.value = ret;
+      }
+    </script>
+  </body>
+</html>
