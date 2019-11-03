@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>input sample</title>
+    <style>
+      header {
+        height: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>input sample (handling composing text)<br /></header>
+
+    <table>
+      <tr>
+        <td>default</td>
+        <td>erace composing text<br />on focus lost</td>
+        <td>for event check(console log)</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" id="myInput1" />
+        </td>
+        <td>
+          <input type="text" id="myInput2" />
+        </td>
+        <td>
+          <input type="text" id="forevent" />
+        </td>
+      </tr>
+    </table>
+
+    <br />
+
+    <!--script -->
+    <script>
+      var fixedstr = "";
+      var elm2 = document.getElementById("myInput2");
+      elm2.onkeyup = function(event) {
+        if (event.isComposing == false) {
+          // register as fixed string
+          fixedstr = elm2.value;
+        }
+      };
+      elm2.onfocus = function(event) {
+        elm2.value = fixedstr;
+      };
+      elm2.onblur = function(event) {
+        elm2.value = fixedstr;
+      };
+
+      // for event
+      var elm = document.getElementById("forevent");
+      elm.oninput = function(event) {
+        console.log("oninput ---------------");
+        console.dir(event);
+      };
+      // this is first event while key press. maybe...
+      elm.onkeydown = function(event) {
+        console.log("onkeydown ------------- key = " + event.key);
+        console.dir(event);
+      };
+      elm.onkeypress = function(event) {
+        console.log("onkeypress -------------");
+        console.dir(event);
+      };
+      elm.onkeyup = function(event) {
+        console.log("onkeyup -------------");
+        console.dir(event);
+      };
+      elm.onchange = function(event) {
+        console.log("onchange -------------");
+        console.dir(event);
+      };
+    </script>
+  </body>
+</html>
