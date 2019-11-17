@@ -2,10 +2,11 @@ import { HelloWorld } from "../../../src/helloworld/helloworld";
 
 describe("sample test", () => {
   describe("helloworld", () => {
-    const hw = new HelloWorld("hello");
-    const str = hw.greet();
+    const str = "hello";
+    const hw = new HelloWorld(str);
+    const ret = hw.greet();
 
-    expect(str).toBe("hello");
+    expect(ret).toBe(str);
   });
   afterAll(() => {
     console.log("after all");
