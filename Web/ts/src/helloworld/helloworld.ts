@@ -1,4 +1,4 @@
-class HelloWorld {
+export class HelloWorld {
   constructor(public displayText: string) {}
 
   greet() {
@@ -6,5 +6,5 @@ class HelloWorld {
   }
 }
 
-var helloWorld = new HelloWorld("HelloWorld");
-document.body.innerHTML = helloWorld.greet();
+//var helloWorld = new HelloWorld("HelloWorld");
+//document.body.innerHTML = helloWorld.greet();
