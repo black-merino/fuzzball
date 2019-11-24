@@ -9,15 +9,15 @@ describe("sample test", () => {
     expect(ret).toBe(str);
   });
   beforeAll(() => {
-    console.log("before all");
+    // console.log("before all");
   });
   beforeEach(() => {
-    console.log("before each");
+    // console.log("before each");
   });
   afterEach(() => {
-    console.log("after each");
+    // console.log("after each");
   });
   afterAll(() => {
-    console.log("after all");
+    // console.log("after all");
   });
 });

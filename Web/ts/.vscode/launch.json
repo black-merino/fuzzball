@@ -4,9 +4,14 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "launch program",
+      "name": "Debug Jest",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "console": "integratedTerminal",
+      "cwd": "${workspaceRoot}",
+      "args": [
+        "--runInBand", 
+        "--no-cache"
+      ],
       "windows": {
         "program": "${workspaceFolder}/node_modules/jest/bin/jest"
       },
@@ -14,3 +19,4 @@
     }
   ]
 }
+

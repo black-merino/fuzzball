@@ -1,8 +1,8 @@
 module.exports = {
-    preset:'ts-jest',
-    testEnvironment:'node',
-    globals:{
-        $:{},
-        document:{}
-    }
-}
+  preset: "ts-jest",
+  testEnvironment: "jsdom",
+  globals: {
+    document: {},
+    window: {},
+  }
+};
