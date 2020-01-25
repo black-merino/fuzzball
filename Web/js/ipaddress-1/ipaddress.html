@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ipaddress sample</title>
+    <link rel="stylesheet" type="text/css" href="./ipaddress.css" />
+    <style>
+      header {
+        height: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>IP address sample<br /></header>
+
+    <button id="show" onclick="myclick()">Get Ip address</button>
+    <br />
+    <p>Result</p>
+    <input type="text" id="resultText" style="left:50px; width:100%" />
+
+    <script src="ipaddress.js"></script>
+    <script>
+      async function myclick() {
+        var textElement = document.getElementById("resultText");
+        // clear result
+        textElement.value = "";
+
+        // get ipaddress
+        var ret = await getIpAddress();
+
+        // output result
+        textElement.value = ret;
+      }
+    </script>
+  </body>
+</html>
